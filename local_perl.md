@@ -1,5 +1,5 @@
 # How to install Perl modules locally #
-Version 0.1 (not tested -use at your own risk)
+Version 0.1 (not tested - use at your own risk)
 
 It may be required for you to install Perl modules locally as you don't have administrative rights on any of the servers at the Field Museum. Here I will describe two ways to install these modules to your home directory, with  the use of local::lib and without. The first of both solutions will show you how to use local::lib to create a local folder in which you can install modules from CPAN (The Comprehensive Perl Archive Network), a curated library with many Perl modules. Then you see how to install downloaded modules with local::lib. The last solution will show how to install downloaded modules without local::lib.
 
