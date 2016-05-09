@@ -1,0 +1,18 @@
+# How to install phyml for multiple threads locally #
+Version 0.1 (not tested - use at your own risk)
+
+Phylip is a program for phylogenetic estimation. Although the program is globally installed in our servers with version 20131022, you may want to run the newest version which is available on github and allows to use multiple cores. You have to install phyml version 3.2.0 in your local directory.
+
+When you're using git:
+~~~
+cd ~
+mkdir -p programs
+cd programs
+wget https://github.com/stephaneguindon/phyml/releases/download/v3.2.0/phyml-mpi
+~~~
+
+to start phyml with 7 cores, type e.g.:
+~~~ 
+mpirun -n 7 ~/programs/phyml-mpi -i myseq -b 100
+~~~
+
