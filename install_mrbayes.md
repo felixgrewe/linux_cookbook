@@ -1,4 +1,5 @@
 # How to install MrBayes as multicore version #
+Version 0.1 (not tested - use at your own risk)
 
 MrBayes is a widely used program for phylogenetic reconstruction. You can start it on our servers with the command:
 ~~~
