@@ -1,6 +1,3 @@
-# tips_and_tricks
-Tips for your daily life on our server
-
 ## Installation of Programs for Phylogenetic Reconstruction
 [Installation of BEAST (single core)](https://github.com/felixgrewe/tips_and_tricks/blob/master/install_BEAST.md)  
 [Installation of MrBayes (multi core)](https://github.com/felixgrewe/tips_and_tricks/blob/master/install_mrbayes.md)  
