@@ -1,7 +1,7 @@
 # Login to the Linux Server #
 Version 0.1 (not tested - use at your own risk)
 
-There are serveral way to login to the Field Museum Linux server and to transfer files between your computer and the server.
+There are serveral ways to login to the Field Museum Linux server and to transfer files between your computer and the server.
 
 ## Using Windows ##
 If you're using Windows, you can [Kitty](http://www.9bis.net/kitty/?page=Welcome&zone=en) to access to the server via command line.
