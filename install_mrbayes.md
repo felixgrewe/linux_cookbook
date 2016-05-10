@@ -1,10 +1,11 @@
 # How to install MrBayes as multicore version #
 Version 0.1 (not tested - use at your own risk)
 
-MrBayes is a widely used program for phylogenetic reconstruction. You can start it on our servers with the command:
+MrBayes is a program for phylogenetic reconstruction. You can start it on our servers with the command:
 ~~~
 mb
 ~~~
+----------------------------
 However, to run MrBayes with multiple cores, you need to install a personal version into your local directory.
 
 Type in the command line of the server:
