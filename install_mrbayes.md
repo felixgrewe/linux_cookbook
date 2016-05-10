@@ -13,7 +13,7 @@ cd ~
 mkdir -p programs
 ~~~
 
-Now, download the MrBayes source code [here](http://mrbayes.sourceforge.net/) and copy to into the programs folder in your home directory (~/programs) on the server.
+Now, download the MrBayes source code [here](http://mrbayes.sourceforge.net/) and copy it into the programs folder in your home directory (~/programs) on the server.
 
 Back on the server, enter:
 ~~~
