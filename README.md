@@ -1,5 +1,5 @@
 # tips_and_tricks
-Tips for your daily life with Linux
+Tips for your daily life on our server
 
 ## Installation of Programs for Phylogenetic Reconstruction ##  
 [Installation of BEAST (single core)](https://github.com/felixgrewe/tips_and_tricks/blob/master/install_BEAST.md)  
