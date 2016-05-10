@@ -7,7 +7,7 @@ phyml
 ~~~
 --------------------------------
 
-Although the program is globally installed in our servers with version 20131022, you may want to run the newest version which is available on github and allows to use multiple cores. You have to install phyml version 3.2.0 in your local directory.
+Although the program is globally installed on our servers with version 20131022, you may want to run the newest version which is available on github and allows to use multiple cores. You have to install phyml version 3.2.0 in your local directory.
 
 When you're using git:
 ~~~
