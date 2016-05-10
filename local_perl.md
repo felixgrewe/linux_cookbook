@@ -20,10 +20,9 @@ echo 'eval $(perl -I $HOME/perl5/lib/perl5 -Mlocal::lib)' >>~/.bashrc
 source ~/.bashrc
 ~~~
 
-If you're asked, type **"yes"**:
-
+If you're asked *"Would you like me to configure as much as possible automatically? [yes]"*, type:
 ~~~
-Would you like me to configure as much as possible automatically? [yes] "
+yes
 ~~~
 
 Test if everything works fine by typing these two lines, one after another:
