@@ -29,7 +29,12 @@ ssh your_user_name@ip_address_of_the_server
 ~~~
 (Type your username and password when asked. For your password protection, you won't see any symbols when typing your password.)
 
-For file transfer from iOS, use e.g. the program **cyberduck**
+For file transfer from iOS, use e.g. the program **cyberduck**:
+
+1. Download and install the program [here](https://cyberduck.io/)
+2. Click on **Open Connection**
+3. Switch to **SFTP** protocol, enter the ip address of the server you ant to connect to, and your user name
+4. Click **Connect**
 
 ## Learn more about the use of the Linux command line ##
 See the CBFM class website [here](http://cbfm.github.io/website/)
