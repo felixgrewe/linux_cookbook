@@ -17,7 +17,7 @@ cd programs
 wget https://github.com/stephaneguindon/phyml/releases/download/v3.2.0/phyml-mpi
 ~~~
 
-to start phyml with 7 cores, type e.g.:
+To start phyml with 7 cores, type e.g.:
 ~~~ 
 mpirun -n 7 ~/programs/phyml-mpi -i myseq -b 100
 ~~~
