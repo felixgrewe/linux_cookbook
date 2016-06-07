@@ -27,7 +27,7 @@ make
 ~~~
 >You may have to adjust to the newest version number that you downloaded
 
-To start MrBayes with 6 parallel processors:
+To start MrBayes with 6 parallel cores:
 ~~~
 cd ~
 mpirun -np 6 ~/programs/mb
