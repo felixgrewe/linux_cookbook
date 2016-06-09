@@ -15,3 +15,6 @@ An example command line to stat RAxML with the mydata.phy file could look like:
 ~~~
 raxmlHPC-PTHREADS -s mydata.phy -n mydata-output -m GTRGAMMA -f a -p 194955 -x 12345 -# 100 -T 12 
 ~~~
+
+-----------------
+[RAxML manual](http://sco.h-its.org/exelixis/php/countManualNew.php)

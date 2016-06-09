@@ -8,4 +8,4 @@
 [Installation of BEAST (single core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST.md)  
 [Installation of MrBayes (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_mrbayes.md)  
 [Installation of Phyml (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_phyml.md)  
-[Running RAxML (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/run_raxml.md)
+[Installation of RAxML (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_raxml.md)
