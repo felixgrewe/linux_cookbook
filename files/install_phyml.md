@@ -14,7 +14,7 @@ Download and install from git:
 cd ~
 mkdir -p programs
 cd programs
-wget https://github.com/stephaneguindon/phyml/releases/download/v3.2.0/phyml-mpi
+wget https://github.com/stephaneguindon/phyml/releases/download/v3.2.20160530/phyml-mpi
 ~~~
 
 To start phyml with 7 cores, type e.g.:
