@@ -14,7 +14,7 @@ cd ~
 mkdir -p programs
 ~~~
 
-Now, download the MrBayes source code [here](https://github.com/felixgrewe/linux_cookbook/blob/master/mrbayes-3.2.6.tar.gz) and copy it into the programs folder in your home directory (~/programs) on the server.
+Now, download the MrBayes source code [here](https://github.com/felixgrewe/linux_cookbook/blob/master/files/mrbayes-3.2.6.tar.gz?raw=true) and copy it into the programs folder in your home directory (~/programs) on the server.
 
 Back on the server, enter:
 ~~~
