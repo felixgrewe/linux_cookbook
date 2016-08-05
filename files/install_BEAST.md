@@ -19,3 +19,8 @@ or
 ~/programs/BEASTv1.8.3/lib/beast -help
 ~~~
 for more information.
+
+To start BEAST with multiple cores (here 4) type:
+~~~
+~/programs/BEASTv1.8.3/bin/beast -beagle_off -threads 4 yourinputfile.xml
+~~~
