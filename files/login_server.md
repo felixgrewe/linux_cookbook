@@ -4,7 +4,7 @@ Version 0.1 (not tested - use at your own risk)
 There are serveral ways to login to the Field Museum Linux server and to transfer files between your computer and the server.
 
 ## Using Windows ##
-If you're using Windows, you can [Kitty](http://www.9bis.net/kitty/?page=Welcome&zone=en) to access to the server via command line.
+If you're using Windows, you can use [Kitty](http://www.9bis.net/kitty/?page=Welcome&zone=en) to access to the server via command line.
 
 1. Download the uncompressed version of the program [here](http://www.9bis.net/kitty/?page=Download)
 2. Start the downloaded .exe file by double clicking
