@@ -8,7 +8,7 @@
 
 ## Installation of Programs for Phylogenetic Reconstruction ##
 [Installation of BEAST (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST.md)  
-[Installation of BEAST2 (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST2.md) 
+[Installation of BEAST2 (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST2.md)  
 [Installation of MrBayes (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_mrbayes.md)  
 [Installation of Phyml (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_phyml.md)  
-[Installation of RAxML (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_raxml.md)
+[Installation of RAxML (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_raxml.md)  
