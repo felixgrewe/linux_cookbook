@@ -1,7 +1,7 @@
 # Running programs in background #
 Version 0.1 (not tested - use at your own risk)
 
-If you want to keep your programs active even if you close the terminal they have to be running in the background.
+If you want to keep your programs active even if you close the terminal, they have to be running in the background.
 
 ## Starting a program in the background ##
 Add an ampersand to your command line:

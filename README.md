@@ -1,7 +1,7 @@
 ## Getting started using the Linux server ##
 [Login to the Server](https://github.com/felixgrewe/linux_cookbook/blob/master/files/login_server.md)  
-[Change your password](https://github.com/felixgrewe/linux_cookbook/blob/master/files/change_pass.md)
-[Running programs in background](https://github.com/felixgrewe/linux_cookbook/blob/master/files/background.md)
+[Change your password](https://github.com/felixgrewe/linux_cookbook/blob/master/files/change_pass.md)  
+[Running programs in background](https://github.com/felixgrewe/linux_cookbook/blob/master/files/background.md)  
 
 ## Help Running Programs on our Linux Servers ##
 [Installation of Local Perl Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_perl.md)   
