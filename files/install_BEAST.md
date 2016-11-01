@@ -1,4 +1,4 @@
-# How to install BEAST on our linux server (single core) #
+# How to install BEAST on our linux server #
 Version 0.1 (not tested - use at your own risk)
 
 You need to install a copy of BEAST (here version 1.8.3) into your local folder to run it on the server:
