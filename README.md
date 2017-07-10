@@ -4,8 +4,8 @@
 [Running programs in background](https://github.com/felixgrewe/linux_cookbook/blob/master/files/background.md)  
 
 ## Help Running Programs on our Linux Servers ##
-[Installation of Local Perl Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_perl.md) 
-[Installation of Local Python Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_python.md)
+[Installation of Local Perl Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_perl.md)  
+[Installation of Local Python Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_python.md)  
 
 ## Installation of Programs for Phylogenetic Reconstruction ##
 [Installation of BEAST (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST.md)  
