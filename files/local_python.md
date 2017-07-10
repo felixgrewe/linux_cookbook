@@ -3,7 +3,7 @@ Version 0.1 (not tested - use at your own risk)
 
 It may be required for you to install python modules locally as you don't have administrative rights on any of the servers at the Field Museum. To use this modules you have to create a virtual environment. 
 
-## Creating Virtual ENvironments ##
+## Creating Virtual Environments ##
 
 Create a folder for your project/program:
 
