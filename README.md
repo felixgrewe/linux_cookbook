@@ -7,6 +7,9 @@
 [Installation of Local Perl Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_perl.md)  
 [Installation of Local Python Modules](https://github.com/felixgrewe/linux_cookbook/blob/master/files/local_python.md)  
 
+## Installation of Programs for Sequence Data Processing ##
+[Installation of PHYLUCE](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_PHYLUCE.md)
+
 ## Installation of Programs for Phylogenetic Reconstruction ##
 [Installation of BEAST (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST.md)  
 [Installation of BEAST2 (single core and multi core)](https://github.com/felixgrewe/linux_cookbook/blob/master/files/install_BEAST2.md)  
