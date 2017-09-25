@@ -14,14 +14,10 @@ cp /home/felix/opt/java/jdk-7u79-linux-x64.tar.gz .
 tar -xzvf jdk-7u79-linux-x64.tar.gz
 rm jdk-7u79-linux-x64.tar.gz
 ln -s jdk1.7.0_79/ latest
-echo '#Changes Version of Java to 1.7 for phylUCE
-' >>~/.bashrc
-echo 'export JAVA_HOME=~/opt/java/latest/bin/java
-' >>~/.bashrc
-echo 'export PATH=~/opt/java/latest/bin:$PATH
-' >>~/.bashrc
-echo 'export MANPATH=~/opt/java/latest/man:$MANPATH
-' >>~/.bashrc
+echo '#Changes Version of Java to 1.7 for phylUCE' >>~/.bashrc
+echo 'export JAVA_HOME=~/opt/java/latest/bin/java' >>~/.bashrc
+echo 'export PATH=~/opt/java/latest/bin:$PATH' >>~/.bashrc
+echo 'export MANPATH=~/opt/java/latest/man:$MANPATH' >>~/.bashrc
 source ~/.bashrc
 cd ~
 ~~~
