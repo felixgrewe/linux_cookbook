@@ -10,7 +10,7 @@ mkdir opt
 cd opt
 mkdir java
 cd java
-cp /home/felix/opt/java/jdk-7u79-linux-x64.tar.gz .
+cp /home/felix/opt/java/jdk-7u79-linux-x64.tar.gz ./
 tar -xzvf jdk-7u79-linux-x64.tar.gz
 rm jdk-7u79-linux-x64.tar.gz
 ln -s jdk1.7.0_79/ latest
