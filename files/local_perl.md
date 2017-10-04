@@ -50,7 +50,7 @@ Find more information here:
 
 [link2](http://scratching.psybermonkey.net/2010/03/perl-how-to-install-perl-module-without.html) 
 
-## Local installation of downloaded Perl modules with local::lib##
+## Local installation of downloaded Perl modules with local::lib ##
 
 After local::lib installation, all of your downloaded modules should get installed into your home directory. E.g. download and unzip the module "baby time":
 
