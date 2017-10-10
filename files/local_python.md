@@ -5,13 +5,7 @@ It may be required for you to install python modules locally as you don't have a
 
 ## Creating Virtual Environments ##
 
-Create a folder for your project/program:
-
-~~~
-mkdir <my_project>
-~~~
-
-Create the virtual environment within this folder:
+Create the virtual environment within a folder:
 ~~~
 virtualenv <my_project>
 ~~~
