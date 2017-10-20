@@ -4,6 +4,7 @@ Version 0.1 (not tested - use at your own risk)
 Before you can install PHYLUCE into your home directory, you have to change the version of java and download and older version of anaconda:
 
 ## Install Java version 7 ##
+Please note that you can only copy the java file when you're connected to Vortex. If you want to install PHYLUCE to a different server, you can find it in the [java archives](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html). Download the file with the name: jdk-7u79-linux-x64.tar.gz. 
 ~~~
 cd ~
 mkdir opt
