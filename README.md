@@ -16,3 +16,7 @@
 [Installation of MrBayes (single core and multi core)](install_mrbayes.md)  
 [Installation of Phyml (single core and multi core)](install_phyml.md)  
 [Installation of RAxML (single core and multi core)](install_raxml.md)  
+
+## Installation of Programs for Microbiome analyses ##  
+[Installation of QIIMEE](install_QIIMEE.md)  
+ 
