@@ -21,6 +21,6 @@
 [Installation of QIIME](install_QIIMEE.md)  
  
 ## Genome Annotation ##
-[Install_Anaconda_and_Perl_modules](Install_Anaconda_and_Perl_modules.md)
+[Install_Anaconda_and_Perl_modules](Install_Anaconda_and_Perl_modules.md)  
 [Installation of MAKER](install_maker.md)  
 [Annotation of Lichen Genomes](pipe_annotation.md)
