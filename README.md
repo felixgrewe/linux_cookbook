@@ -20,3 +20,6 @@
 ## Installation of Programs for Microbiome analyses ##  
 [Installation of QIIME](install_QIIMEE.md)  
  
+## Genome Annotation ##
+[Installation of MAKER](install_maker.md)
+[Annotation of Lichen Genomes](pipe_annotation.md)
