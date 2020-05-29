@@ -43,6 +43,8 @@ Function annotation with InterProScan, TrEMBL and Swiss-Prot database.
 
 ## InterProScan
 	
+Running InterProScan with this command
+
     opt/interproscan-xxx/interproscan.sh -cpu 20 -i xxx.all.maker.augustus_masked.proteins.fasta -iprlookup -goterms -pa -b xxx.interpro
 
 ## Setup TrEMBL and Swiss-Prot database
@@ -77,6 +79,8 @@ Function annotation with InterProScan, TrEMBL and Swiss-Prot database.
 
  2.  Curating the annotations
 
-    curate_annotations.pl -r -i xxx.all.maker.augustus_masked.annotations
+Curating the annotations by sellect the correct product name using this command
+
+    perl curate_annotations.pl -r -i xxx.all.maker.augustus_masked.annotations
 
 
