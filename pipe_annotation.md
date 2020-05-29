@@ -47,7 +47,7 @@ Function annotation with InterProScan, TrEMBL and Swiss-Prot database.
 
 ## Setup TrEMBL and Swiss-Prot database
 
- 1.  Download databases
+ 1.  Download databases 
 	
     mkdir UniProt
     get_UniProt.pl -s -t -n 20 -l download.log
