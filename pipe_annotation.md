@@ -2,18 +2,18 @@
 
 This pipeline is a prototype of Lichen genome annotation.
 
-# Gene prediction
+## Gene prediction
 
 Prediction use maker with Augustus using *Aspergillus nidulansprediction* species model
 
-## Reorder contigs
+### Reorder contigs
 
 **reorder and rename contigs by size:**
    
     seqkit sort --by-length --reverse contigs.fasta | seqkit replace --pattern '.+' --replacement 'Contig_{nr}' --nr-width 3
 
    
-## Run maker
+### Run maker
 
  1.  Edit maker_opts.ctl file
 	- put `genome=your_genome_fasta_file`
@@ -31,23 +31,23 @@ Prediction use maker with Augustus using *Aspergillus nidulansprediction* specie
 		
 3. Run maker `~/opt/maker/bin/maker`
 
-## Extract outputs from maker
+### Extract outputs from maker
 
 Gff file: `~/opt/maker/bin/gff3_merge -d xxx.maker.output/xxx_master_datastore_index.log`
 fasta file: `~/opt/maker/bin/fasta_merge -d xxx.maker.output/xxx_master_datastore_index.log`
 
 
-# Function annotation
+## Function annotation
 
 Function annotation with InterProScan, TrEMBL and Swiss-Prot database.
 
-## InterProScan
+### InterProScan
 	
 Running InterProScan with this command
 
     opt/interproscan-xxx/interproscan.sh -cpu 20 -i xxx.all.maker.augustus_masked.proteins.fasta -iprlookup -goterms -pa -b xxx.interpro
 
-## Setup TrEMBL and Swiss-Prot database
+### Setup TrEMBL and Swiss-Prot database
 
  1.  Download databases 
 	
@@ -59,7 +59,7 @@ Running InterProScan with this command
     hash_uniprot.pl uniprot_sprot.fasta uniprot_trembl.fasta
 		
 
-## Diamond blast
+### Diamond blast
 
 1.  Blast against two database with nucl faa file 
 	
@@ -71,7 +71,7 @@ Running InterProScan with this command
     perl get_queries.pl xxx.all.maker.augustus_masked.proteins.fasta
 		
 
-## Manual curation with all evidence
+### Manual curation with all evidence
 
 1.  Parsing the result of InterProScan 5 and SwissProt/UniProt searches
 	
