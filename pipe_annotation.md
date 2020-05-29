@@ -1,4 +1,4 @@
-o;?# Lichen Genome Annotation Pipeline
+# Lichen Genome Annotation Pipeline
 
 This pipeline is a prototype of Lichen genome annotation.
 
