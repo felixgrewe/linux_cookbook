@@ -66,20 +66,20 @@ Running InterProScan with this command
         diamond blastp -d ~/UniProt/uniprot_trembl -q xxx.all.maker.augustus_masked.proteins.fasta -o xxx_trembl.m8
         diamond blastp -d ~/UniProt/uniprot_sprot -q xxx.all.maker.augustus_masked.proteins.fasta -o xxx_sprot.m8
 
- 2.  Generating a list of all proteins queried, inncluding those with no hits against SwissProt/UniProt
+ 2.  Generating a list of all proteins queried, inncluding those with no hits against SwissProt/UniProt (customized scripts are abiliable at https://github.com/felixgrewe/linux_cookbook/tree/master/Annotation_scripts)
 
     perl get_queries.pl xxx.all.maker.augustus_masked.proteins.fasta
 		
 
 ### Manual curation with all evidence
 
-1.  Parsing the result of InterProScan 5 and SwissProt/UniProt searches
+1.  Parsing the result of InterProScan 5 and SwissProt/UniProt searches (customized scripts are abiliable at https://github.com/felixgrewe/linux_cookbook/tree/master/Annotation_scripts)
 	
         perl parse_UniProt_BLASTs.pl -q xxx.all.maker.augustus_masked.proteins.queries -sl ~/UniProt/uniprot_sprot.products.hash -sb xxx_sprot.m8 -tl ~/UniProt/uniprot_trembl.products.hash -tb xxx_trembl.m8 -ip xxx.interpro.tsv
 
  2.  Curating the annotations
 
-Curating the annotations by sellect the correct product name using this command
+Curating the annotations by sellect the correct product name using this command (customized scripts are abiliable at https://github.com/felixgrewe/linux_cookbook/tree/master/Annotation_scripts)
 
     perl curate_annotations.pl -r -i xxx.all.maker.augustus_masked.annotations
 
