@@ -10,18 +10,18 @@ Maker needs Perl and Bioperl for installation
 
 **Need to have perl 5.8.0 or higher installed and modules as below:**
   
- Installed from CPAN:
+ Installed from conda or CPAN:
  
-	- *DBI
-	- *DBD::SQLite
-	- *forks
+	- *DBI	conda install -c bioconda perl-dbi
+	- *DBD::SQLite	conda install -c bioconda perl-dbd-sqlite
+	- *forks	conda install -c bioconda perl-forks
 	- *forks::shared
-	- *File::Which
-	- *Perl::Unsafe::Signals
-	- *Bit::Vector
-	- *Inline::C
-	- *IO::All
-	- *IO::Prompt
+	- *File::Which	conda install -c bioconda perl-file-which
+	- *Perl::Unsafe::Signals	conda install -c bioconda perl-perl-unsafe-signals
+	- *Bit::Vector	conda install -c bioconda perl-bit-vector
+	- *Inline::C	conda install -c bioconda perl-inline-c
+	- *IO::All	conda install -c bioconda perl-io-all
+	- *IO::Prompt	conda install -c bioconda perl-io-prompt
 		
 1.  Type 'perl -MCPAN -e shell' to access the CPAN shell.  You may have to answer some configuration questions if this is your first time starting CPAN. You can normally just hit enter to accept CPAN defaults. You may have to be logged in as 'root' or use sudo to install modules via CPAN. If you don't have root access, then install local::lib from http://www.cpan.org using the bootstrap method to setup a non-root CPAN install location.
 	
@@ -32,7 +32,8 @@ Maker needs Perl and Bioperl for installation
 
 **Quick and dirty installation (not full BioPerl package)**
 
- 1.  Download and unpack the most recent BioPerl package to a directory of your choice, or use Git to access the most current version of BioPerl. See http://www.bioperl.org for details on how to download using Git. You will then need to set PERL5LIB in your .bash_profile to the location of bioperl (i.e. export PERL5LIB="/usr/local/bioperl-live:$PERL5LIB").
+ 1.  Use the conda installation by conda install -c bioconda perl-bioperl
+ 2.  Or Download and unpack the most recent BioPerl package to a directory of your choice, or use Git to access the most current version of BioPerl. See http://www.bioperl.org for details on how to download using Git. You will then need to set PERL5LIB in your .bash_profile to the location of bioperl (i.e. export PERL5LIB="/usr/local/bioperl-live:$PERL5LIB").
 
 **Full BioPerl instalation via CPAN (soduer)**
 	
@@ -50,7 +51,7 @@ Maker needs extrernal software for gene prediction.
 
 ## NCBI-BLAST 
 
-**Need to have perl 5.8.0 or higher installed and modules as below:**
+**ncbi-blast is usually globly installed, so you can skip this**
 
 1.  Unpack the tar file into the directory of your choice (i.e. /usr/local).
 		
@@ -105,15 +106,19 @@ Maker needs extrernal software for gene prediction.
 
 **Download from http://www.yandell-lab.org**
 
-1. Unpack the MAKER tar file into the directory of your choice (i.e. ~/opt).
+ 1. Unpack the MAKER tar file into the directory of your choice (i.e. ~/opt). `tar zxvf maker-3.01.03.tgz`
  
  2. Go to the MAKER src/ directory. `cd ~/opt/maker/src`
  
  3. Configuration using `perl Build.PL`
  
- 4. Installation using `./Build install`
+ 4. Installing missing dependencies `./Build installdeps`
  
- 5. Add the following to your .profile if you haven't already:
+ 5. Installation using `./Build install`
+ 
+ 6. Installation AUGUSTUS using `./Build augustus`
+ 
+ 7. Add the following to your .profile if you haven't already:
 		
 		`export ZOE="where_snap_is/Zoe"`
 
