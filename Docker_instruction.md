@@ -10,22 +10,29 @@ The docker container currently include the REPET 3.0 and other complex pipelines
 **This need sudoer permission:**
 
 1.  Test runs after installation:
+	
     sudo docker run hello-world
-
+	
 2.  Download images (use REPET as an example):
+	
     sudo docker pull urgi/docker_vre_aio:latest
-
+	
 List all the downloaded image:
     sudo docker image ls
 
 3.  Create the container for the image and forward for the port for login (use REPET as an example):
+	
 sudo docker run -p 222:22 --name repet -d urgi/docker_vre_aio
-
+	
 List all the created containers:
+	
     sudo docker ps
-
+	
 4.  Execute an interactive bash shell on the container:
+	
     sudo docker exec -it repet bash
-
+	
 5.  Stop the container:
+	
     sudo docker stop repet
+	
