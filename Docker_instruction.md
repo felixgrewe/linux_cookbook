@@ -21,7 +21,7 @@ List all the downloaded image:
 	
     sudo docker image ls
 
- 3.  Create the container for the image and forward for the port for login (use REPET as an example):
+ 3.  Create the container for the image and forward for the port for login:
 	
 sudo docker run -p 222:22 --name repet -d urgi/docker_vre_aio
 
