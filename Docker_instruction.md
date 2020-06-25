@@ -17,7 +17,7 @@ The docker container currently include the REPET 3.0 and other complex pipelines
 	
     sudo docker pull urgi/docker_vre_aio:latest
 
-		List all the downloaded image:
+List all the downloaded image:
 	
     sudo docker image ls
 
@@ -25,7 +25,7 @@ The docker container currently include the REPET 3.0 and other complex pipelines
 	
 sudo docker run -p 222:22 --name repet -d urgi/docker_vre_aio
 
-		List all the created containers:
+list all the created containers:
 	
     sudo docker ps
 
