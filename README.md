@@ -26,4 +26,5 @@
 [Annotation of Lichen Genomes](pipe_annotation.md)
 
 ## Docker Engine ##
-[Docker Basic Instruction](Docker_instruction.md)  
+[Docker Basic Instruction](Docker_installation_instruction.md)  
+[Docker image usage](Docker_image_usage.md)  
