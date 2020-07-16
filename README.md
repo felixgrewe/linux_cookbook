@@ -25,6 +25,9 @@
 [Installation of MAKER](install_maker.md)  
 [Annotation of Lichen Genomes](pipe_annotation.md)
 
+## TE Annotation ##
+[REPET instruction](REPET_usage.md)  
+
 ## Docker Engine ##
 [Docker Basic Instruction](Docker_installation_instruction.md)  
 [Docker image usage](Docker_image_usage.md)  
