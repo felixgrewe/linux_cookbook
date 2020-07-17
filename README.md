@@ -31,3 +31,6 @@
 ## Docker Engine ##
 [Docker Basic Instruction](Docker_installation_instruction.md)  
 [Docker image usage](Docker_image_usage.md)  
+
+## Genome visualization using Apollo ##
+[JBrowse installation](JBrowse_installation.md)  
