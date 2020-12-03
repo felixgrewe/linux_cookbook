@@ -20,6 +20,9 @@
 ## Installation of Programs for Microbiome analyses ##  
 [Installation of QIIME](install_QIIMEE.md)  
  
+## Genome Assembly ##
+[Assembly of Lichen Genomes](assembly.md)
+
 ## Genome Annotation ##
 [Install Anaconda and Perl modules](Install_Anaconda_and_Perl_modules.md)  
 [Installation of MAKER](install_maker.md)  
