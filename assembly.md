@@ -48,7 +48,7 @@ The assembled contigs/scaffolds need to be farther polish for consensus (using R
 
     bwa index assembled.fasta
     bwa mem -t 16 -x ont2d assembled.fasta nanopore.fastq > mapping.sam
-    racon -m 8 -x -6 -t 16 nanopore.fastq assembled.fasta mapping.sam > racon.fasta
+    racon -m 8 -x -6 -t 16 nanopore.fastq mapping.sam assembled.fasta > racon.fasta
     bwa index racon.fasta
     bwa mem -t 14 -x ont2d racon.fasta nanopore.fastq > mapping2nd.sam
     racon -m 8 -x -6 -t 16 nanopore.fastq mapping2nd.sam racon.fasta > racon2nd.fasta
