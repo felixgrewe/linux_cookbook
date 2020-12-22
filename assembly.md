@@ -47,7 +47,7 @@ The assembled contigs/scaffolds need to be farther polish for consensus (using R
 **Racon can correct the assembly process that do not have consensus steps. This usually take 2 round Racon for better result. This example using a -m (score for matching bases) 3 and -x (score for mismatching bases) -5. Racon also required overlaps mapping which can be acquired using bwa.**
 
     bwa index assembled.fasta
-    bwa mem -t 16 -x nt2d assembled.fasta nanopore.fastq > mapping.sam
+    bwa mem -t 16 -x ont2d assembled.fasta nanopore.fastq > mapping.sam
     racon -m 8 -x -6 -t 16 assembled.fasta mapping.sam > racon.fasta
     bwa index racon.fasta
     bwa mem -t 14 -x ont2d racon.fasta nanopore.fastq > mapping2nd.sam
