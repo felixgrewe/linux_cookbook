@@ -21,12 +21,13 @@
 [Installation of QIIME](install_QIIMEE.md)  
  
 ## Genome Assembly ##
-[Assembly of Lichen Genomes](assembly.md)
+[Genomes Assembly](assembly.md)
 
 ## Genome Annotation ##
 [Install Anaconda and Perl modules](Install_Anaconda_and_Perl_modules.md)  
 [Installation of MAKER](install_maker.md)  
 [Annotation of Lichen Genomes](pipe_annotation.md)
+[Annotation of Complex Genomes](ComplexGenomeAnnotation.md)
 
 ## TE Annotation ##
 [REPET instruction](REPET_usage.md)  
