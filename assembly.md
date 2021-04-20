@@ -1,4 +1,4 @@
-# Lichen Genome Assembly Instruction
+# Genome Assembly Instruction
 
 This pipeline is a prototype of genome assembly using Lichen genome as an example.
 

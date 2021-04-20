@@ -154,9 +154,9 @@ Repeat annotation using RepeatModeler
 ….bash mRNA_annotations.sh
     busco -i pelargonium_rnd1.all.maker.transcripts1000_redu.fasta -o pelargonium_rnd1_maker -l embryophyta_odb10 -m genome -c 8 --long --augustus_species arabidopsis --augustus_parameters='--progress=true'
     cd /home/ysun/projects/pelargonium/new/augustus/round1/pelargonium_rnd1_maker/run_embryophyta_odb10/augustus_output/retraining_parameters/BUSCO_pelargonium_rnd1_maker/
-    rename 's/BUSCO_pelargonium_rnd1_maker/Pelargonium_citronellum/g' *
-    sed -i 's/BUSCO_pelargonium_rnd1_maker/Pelargonium_citronellum/g' Pelargonium_citronellum_parameters.cfg
-    sed -i 's/BUSCO_pelargonium_rnd1_maker/Pelargonium_citronellum/g' Pelargonium_citronellum_parameters.cfg.orig1
+    rename 's/BUSCO_pelargonium_rnd1_maker/pelargonium_citronellum/g' *
+    sed -i 's/BUSCO_pelargonium_rnd1_maker/pelargonium_citronellum/g' pelargonium_citronellum_parameters.cfg
+    sed -i 's/BUSCO_pelargonium_rnd1_maker/pelargonium_citronellum/g' pelargonium_citronellum_parameters.cfg.orig1
     mkdir $AUGUSTUS_CONFIG_PATH/species/pelargonium
 ### Maker 2nd run
 1.  Edit maker_opts.ctl file with following settings
