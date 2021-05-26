@@ -25,3 +25,17 @@ To start BEAST with multiple cores (here use 4) type:
 ~~~
 ~/programs/beast/bin/beast -threads 4 yourinputfile.xml
 ~~~
+
+To install the BEAGLE library for high performance evaluation in BEAST, type:
+
+~~~
+conda install -c bioconda beagle-lib
+~~~
+and then to use beagle library if available type:
+~~~
+java -jar ~/programs/beast/lib/launcher.jar -beagle input.xml
+~~~
+to use use SSE extensions if available type:
+~~~
+java -jar ~/programs/beast/lib/launcher.jar -beagle_SSE input.xml
+~~~
