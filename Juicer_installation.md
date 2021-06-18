@@ -33,3 +33,30 @@ This is an instruction of Juicer installation for CPU version, which can deal wi
     conda install -c conda-forge coreutils
 2) Burrows-Wheeler Aligner (BWA)
     conda install -c bioconda bwa
+
+##Build the Juicer using reference data
+
+1) Make the reference folder
+    mkdir juicer_data
+    cd juicer_data
+    mkdir references; cd references
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta.amb
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta.ann
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta.bwt
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta.pac
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/references/Homo_sapiens_assembly19.fasta.sa
+    cd ..
+
+2) Build the restriction site folder
+    mkdir restriction_sites; cd restriction_sites
+    wget https://s3.amazonaws.com/juicerawsmirror/opt/juicer/restriction_sites/hg19_MboI.txt
+    awk 'BEGIN{OFS="\t"}{print $1, $NF}' hg19_MboI.txt > hg19.chrom.sizes
+    cd ..
+
+3) Build the dataset from Hi-C
+    mkdir HIC003; cd HIC003
+    mkdir fastq; cd fastq
+    wget http://juicerawsmirror.s3.amazonaws.com/opt/juicer/work/HIC003/fastq/HIC003_S2_L001_R1_001.fastq.gz
+    wget http://juicerawsmirror.s3.amazonaws.com/opt/juicer/work/HIC003/fastq/HIC003_S2_L001_R2_001.fastq.gz
+    cd ..
