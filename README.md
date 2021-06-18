@@ -38,3 +38,7 @@
 
 ## Genome visualization using Apollo ##
 [JBrowse installation](JBrowse_installation.md)  
+
+## Juicer installation and usage ##
+[Juicer installation](Juicer_installation.md)  
+
