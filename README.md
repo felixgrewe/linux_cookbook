@@ -41,4 +41,4 @@
 
 ## Juicer installation and usage ##
 [Juicer installation](Juicer_installation.md)  
-
+[Juicer usage](Juicer_usage.md)  
