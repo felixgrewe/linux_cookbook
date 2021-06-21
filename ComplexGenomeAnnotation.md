@@ -2,7 +2,7 @@
 
 This pipeline is a prototype of complex genome annotation using maker and other softerware.
 
-##Software prerequisites
+## Software prerequisites
 
 1) RepeatModeler and RepeatMasker with RepBase in optional
 2) Maker
