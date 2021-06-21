@@ -2,12 +2,12 @@
 
 This is an instruction of Juicer installation for CPU version, which can deal with Hi-C data.
 
-##Create and conda environment for Juicer:
+## Create and conda environment for Juicer:
 
     conda create –name juicer
     conda activate juicer
 
-##Download the Juicer and reference files:
+## Download the Juicer and reference files:
 
     mkdir ~/opt/Juicer
     git clone https://github.com/theaidenlab/juicer.git
@@ -18,7 +18,7 @@ This is an instruction of Juicer installation for CPU version, which can deal wi
     ln -s juicer_tools.1.9.9_jcuda.0.8.jar  juicer_tools.jar
     cd ../..
 	
-###Blow is just an example for Juicer data format, please see the Juicer build below
+### Blow is just an example for Juicer data format, please see the Juicer build below
 
     mkdir references
     cp <my_reference_fastas_and_indices> references/
@@ -31,14 +31,14 @@ This is an instruction of Juicer installation for CPU version, which can deal wi
     mv <fastq_files> fastq/
     ~/opt/Juicer/scripts/juicer.sh -D <myJuicerDir>
 
-##Installation the dependencies for Juicer:
+## Installation the dependencies for Juicer:
 
 1) GNU CoreUtils
     conda install -c conda-forge coreutils
 2) Burrows-Wheeler Aligner (BWA)
     conda install -c bioconda bwa
 
-##Build the Juicer using reference data
+## Build the Juicer using reference data
 
 1) Make the reference folder
     mkdir juicer_data
