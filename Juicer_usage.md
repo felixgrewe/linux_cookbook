@@ -4,7 +4,7 @@ This is an instruction of Juicer usage using the reference data from Juicer.
 
 
 
-##Juicer detailed usage:
+## Juicer detailed usage:
 
   Usage: juicer.sh [-g genomeID] [-d topDir] [-q queue] [-l long queue] [-s site]
                  [-a about] [-R end] [-S stage] [-p chrom.sizes path]
@@ -56,7 +56,7 @@ This is an instruction of Juicer usage using the reference data from Juicer.
   * -h: print this help and exit
 
 
-##Running Juicer with correct folder path:
+## Running Juicer with correct folder path:
 
     ~/opt/juicer/scripts/juicer.sh \
     -z ~/opt/juicer/references/Homo_sapiens_assembly19.fasta #reference genome\
