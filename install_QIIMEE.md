@@ -1,25 +1,27 @@
-# How to install QIIME on our linux server #
-Version 0.1 (not tested - use at your own risk)
+# How to install QIIME2 on our linux server #
+Version 0.2 (not tested - use at your own risk)
 
 If not already done, you need to install Anaconda:
 ~~~
 cd ~
-wget https://repo.anaconda.com/archive/Anaconda2-5.2.0-Linux-x86_64.sh
-bash Anaconda2-5.2.0-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+bash Anaconda3-2021.05-Linux-x86_64.sh
 source ~/.bashrc
 ~~~
 
 Install QIIME with Anaconda:
 ~~~
-conda create -n qiime1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
+cd ~/Downloads
+wget https://data.qiime2.org/distro/core/qiime2-2021.4-py38-linux-conda.yml
+conda env create -n qiime2-2021.4 --file qiime2-2021.4-py38-linux-conda.yml
 ~~~
 
 Start QIIME by activating the QIIME environment:
 ~~~
-source activate qiime1
+conda activate qiime2-2021.4
 ~~~
 
 Finish your work in QIIME by deactivating the QIIME environment:
 ~~~
-source deactivate
+conda deactivate
 ~~~
