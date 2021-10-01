@@ -27,7 +27,7 @@
 [Install Anaconda and Perl modules](Install_Anaconda_and_Perl_modules.md)  
 [Installation of MAKER](install_maker.md)  
 [Annotation of Lichen Genomes](pipe_annotation.md)  
-[Annotation of Complex Genomes](ComplexGenomeAnnotation.md)
+[Annotation of Complex Genomes](ComplexGenomeAnnotation.md)  
 [Funannotation installation](funannotation_installation.md)    
  
 ## TE Annotation ##
