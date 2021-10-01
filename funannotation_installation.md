@@ -54,7 +54,7 @@ Fill the academic license agreement and download from: http://topaz.gatech.edu/G
 
 3.  Add GeneMark to .profile
 
-export PATH=$PATH:/your_home_folder/opt/gm_et_linux_64
+    export PATH=$PATH:/your_home_folder/opt/gm_et_linux_64
 
 
 ### Setup database for funannotation:
@@ -78,6 +78,10 @@ export PATH=$PATH:/your_home_folder/opt/gm_et_linux_64
 	
 	echo "export GENEMARK_PATH=~/opt/gmes_linux_64" >> /conda/installation/path/envs/funannotate/etc/conda/activate.d/funannotate.sh
 	echo "unset GENEMARK_PATH" >> /conda/installation/path/envs/funannotate/etc/conda/deactivate.d/funannotate.sh
+	
+If the bio-perl is not detect after you install it with conda, please do
+
+    export PERL5LIB=/your_conda_path/envs/virsorter/lib/perl5/site_perl/5.22.0/ 
 	
 ### run tests for funannotation
 
