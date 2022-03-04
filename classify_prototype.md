@@ -21,12 +21,14 @@ This is a prototype for classify the taxonomy of the metagenome sequencing
 
 ## Installation and setup the diamond taxonomy blast
 
-1) Krona download and installation
-    cd ~/opt
-    wget https://github.com/marbl/Krona/archive/refs/tags/v2.8.tar.gz
-    tar -xzvf v2.8.tar.gz
-    cd Krona-2.8/KronaTools/
-    ./install.pl --prefix /<your full path to your home folder>/opt/
+1) install diamond in the new environment (some software may influence the new version of diamond blast to be installed)
+
+    conda create -n diamond -c bioconda diamond
+	
+2) Download and build the latest NCBI NR database for diamond
+
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz
+    wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz
 
 2) Download/update the latest NCBI taxonomy database
     ./updateTaxonomy.sh
