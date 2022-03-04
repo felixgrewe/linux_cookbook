@@ -22,13 +22,30 @@ This pipeline is a prototype of complex genome annotation using maker and other 
 
 Prediction use mainly maker with Augustus SNAP as reference.
 
-### Reorder contigs
+### Reorder contigs （optional）
 
 **reorder and rename contigs by size:**
    
     seqkit sort --by-length --reverse contigs.fasta | seqkit replace --pattern '.+' --replacement 'Contig_{nr}' --nr-width 3
+	
+### Clean and sort contigs using funannotate （optional）
 
-### De Novo Repeat Identification
+    funannotate clean -i contigs.fasta -o contigs_clean.fasta
+	funannotate sort -i contigs_clean.fasta -o contigs_sorted.fasta
+	
+### Using the RepBase database for the repeat annotation
+
+    mkdir repbase_mask
+	RepeatMasker -pa 20 -e ncbi -species lamiales -dir repbase_mask pedicularis_sorted.fasta
+	ProcessRepeats -species lamiales pedicularis_sorted.fasta.cat.gz
+
+### Process the RepeatMasker, isolate the complex repeats and reformat the gff file for maker use
+
+    rmOutToGFF3.pl pedicularis_sorted.fasta.out > pedicularis.full_mask.out.gff3
+	grep -v -e "Satellite" -e ")n" -e "-rich" pedicularis.full_mask.out.gff3 > pedicularis.full_mask.complex.gff3
+	cat pedicularis.full_mask.complex.gff3 | perl -ane '$id; if(!/^\#/){@F = split(/\t/, $_); chomp $F[-1];$id++; $F[-1] .= "\;ID=$id"; $_ = join("\t", @F)."\n"} print $_' > pedicularis.full_mask.complex.reformat.gff3
+
+### De Novo Repeat Identification (only for no RepBase database)
 
 Repeat annotation using RepeatModeler
 
@@ -39,7 +56,7 @@ Repeat annotation using RepeatModeler
 
  1.  Edit maker_opts.ctl file with following settings
     #-----Genome (these are always required)
-    genome=pelargonium_citronellum.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
+    genome=../pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
     
     #-----Re-annotation Using MAKER Derived GFF3
@@ -53,34 +70,34 @@ Repeat annotation using RepeatModeler
     other_pass=0 #passthrough anyything else in maker_gff: 1 = yes, 0 = no
     
     #-----EST Evidence (for best results provide a file for at least one)
-    est=Pcitro-RNA-TrinityAssembly.fna #set of ESTs or assembled mRNA-seq in fasta format
+    est=./116.BFcav1_FLleaf.fasta #set of ESTs or assembled mRNA-seq in fasta format
     altest= #EST/cDNA sequence file in fasta format from an alternate organism
     est_gff= #aligned ESTs or mRNA-seq from an external GFF3 file
     altest_gff= #aligned ESTs from a closly relate species in GFF3 format
     
     #-----Protein Homology Evidence (for best results provide a file for at least one)
-    protein=Arabidopsis_pro.fasta  #protein sequence file in fasta format (i.e. from mutiple organisms)
+    protein=  #protein sequence file in fasta format (i.e. from mutiple organisms)
     protein_gff=  #aligned protein homology evidence from an external GFF3 file
     
     #-----Repeat Masking (leave values blank to skip repeat masking)
     model_org=all #select a model organism for RepBase masking in RepeatMasker
     rmlib= #provide an organism specific repeat library in fasta format for RepeatMasker
-    repeat_protein=/home/ysun/opt/maker/data/te_proteins.fasta #provide a fasta file of transposable element proteins for RepeatRunner
-    rm_gff= #pre-identified repeat elements from an external GFF3 file
+    repeat_protein=/home/FM/ysun/opt/maker/data/te_proteins.fasta #provide a fasta file of transposable element proteins for RepeatRunner
+    rm_gff=../pedicularis.full_mask.complex.reformat.gff3 #pre-identified repeat elements from an external GFF3 file
     prok_rm=0 #forces MAKER to repeatmask prokaryotes (no reason to change this), 1 = yes, 0 = no
     softmask=1 #use soft-masking rather than hard-masking in BLAST (i.e. seg and dust filtering)
     
     #-----Gene Prediction
     snaphmm= #SNAP HMM file
     gmhmm= #GeneMark HMM file
-    augustus_species= #Augustus gene prediction species model
+    augustus_species=aspergillus_nidulans #Augustus gene prediction species model
     fgenesh_par_file= #FGENESH parameter file
     pred_gff= #ab-initio predictions from an external GFF3 file
     model_gff= #annotated gene models from an external GFF3 file (annotation pass-through)
     run_evm=0 #run EvidenceModeler, 1 = yes, 0 = no
-    est2genome=1 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
-    protein2genome=1 #infer predictions from protein homology, 1 = yes, 0 = no
-    trna=1 #find tRNAs with tRNAscan, 1 = yes, 0 = no
+    est2genome=0 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
+    protein2genome=0 #infer predictions from protein homology, 1 = yes, 0 = no
+    trna=0 #find tRNAs with tRNAscan, 1 = yes, 0 = no
     snoscan_rrna= #rRNA file to have Snoscan find snoRNAs
     snoscan_meth= #-O-methylation site fileto have Snoscan find snoRNAs
     unmask=0 #also run ab-initio prediction programs on unmasked sequence, 1 = yes, 0 = no
@@ -90,7 +107,7 @@ Repeat annotation using RepeatModeler
     
     #-----External Application Behavior Options
     alt_peptide=C #amino acid used to replace non-standard amino acids in BLAST databases
-    cpus=20 #max number of cpus to use in BLAST and RepeatMasker (not for MPI, leave 1 when using MPI)
+    cpus=30 #max number of cpus to use in BLAST and RepeatMasker (not for MPI, leave 1 when using MPI)
     
     #-----MAKER Behavior Options
     max_dna_len=100000 #length for dividing up contigs into chunks (increases/decreases memory usage)
@@ -115,6 +132,7 @@ Repeat annotation using RepeatModeler
     clean_try=0 #remove all data from previous run before retrying, 1 = yes, 0 = no
     clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
     TMP= #specify a directory other than the system default temporary directory for temporary files
+
     
  2.  Edit maker_opts.ctl file 
 	- put the location of executables. For example:
@@ -147,17 +165,25 @@ Repeat annotation using RepeatModeler
 ### Training Augustus with BUSCO
 “Using the BUSCO 4.1.4 for the trainning”
 
-    samtools index pelargonium_citronellum.fasta
-    mkdir augustus
-    mkdir augustus/round1
-    cd augustus/round1
-….bash mRNA_annotations.sh
-    busco -i pelargonium_rnd1.all.maker.transcripts1000_redu.fasta -o pelargonium_rnd1_maker -l embryophyta_odb10 -m genome -c 8 --long --augustus_species arabidopsis --augustus_parameters='--progress=true'
-    cd /home/ysun/projects/pelargonium/new/augustus/round1/pelargonium_rnd1_maker/run_embryophyta_odb10/augustus_output/retraining_parameters/BUSCO_pelargonium_rnd1_maker/
-    rename 's/BUSCO_pelargonium_rnd1_maker/pelargonium_citronellum/g' *
-    sed -i 's/BUSCO_pelargonium_rnd1_maker/pelargonium_citronellum/g' pelargonium_citronellum_parameters.cfg
-    sed -i 's/BUSCO_pelargonium_rnd1_maker/pelargonium_citronellum/g' pelargonium_citronellum_parameters.cfg.orig1
-    mkdir $AUGUSTUS_CONFIG_PATH/species/pelargonium
+    cd pedicularis_sorted.maker.output
+	~/opt/maker/bin/gff3_merge -s -d pedicularis_sorted_master_datastore_index.log > pedicularis_rnd1.all.maker.gff
+	~/opt/maker/bin/fasta_merge -d pedicularis_sorted_master_datastore_index.log
+	~/opt/maker/bin/gff3_merge -n -s -d pedicularis_sorted_master_datastore_index.log > pedicularis_rnd1.all.maker.noseq.gff
+	cd ..
+	samtools index pedicularis_sorted.fasta
+	mkdir augustus
+	mkdir augustus/round1
+	awk -v OFS="\t" '{print $1, $4, $5 }' ../../pedicularis_sorted.maker.output/pedicularis_rnd1.all.maker.noseq.gff | awk -v OFS="\t" '{ if ($2 < 1000) print $1, "0", $3+1000; else print $1, $2-1000, $3+1000 }' | bedtools getfasta -fi ../../pedicularis_sorted.fasta -bed - -fo pedicularis_rnd1.all.maker.transcripts1000.fasta
+	seqkit rmdup -s <pedicularis_rnd1.all.maker.transcripts1000.fasta> pedicularis_rnd1.all.maker.transcripts1000_du.fasta
+	busco -i pedicularis_rnd1.all.maker.transcripts1000_du.fasta -o pedicularis_rnd1_maker -l eudicots_odb10 -m genome -c 8 --long --augustus_species arabidopsis --augustus_parameters='--progress=true' -f
+	cd /home/FM/ysun/projects/Pedicularis/maker/116.BFcav1_FLleaf/augustus/round1/pedicularis_rnd1_maker/run_eudicots_odb10/augustus_output/retraining_parameters/BUSCO_pedicularis_rnd1_maker/
+	rename 's/BUSCO_pedicularis_rnd1_maker/pedicularis/g' *
+	sed -i 's/BUSCO_pedicularis_rnd1_maker/pedicularis/g' pedicularis_parameters.cfg
+	sed -i 's/BUSCO_pedicularis_rnd1_maker/pedicularis/g' pedicularis_parameters.cfg.orig1
+	mkdir /home/FM/ysun/anaconda3/envs/maker/config/species/pedicularis
+	cp pedicularis* /home/FM/ysun/anaconda3/envs/maker/config/species/pedicularis
+	
+
 ### Maker 2nd run
 1.  Edit maker_opts.ctl file with following settings
     #-----Genome (these are always required)
