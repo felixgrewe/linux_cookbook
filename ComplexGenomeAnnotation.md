@@ -215,7 +215,7 @@ This is using the result from the first round of maker to tranning the SANP and 
 ### Maker 2nd run
 
 1.  Edit maker_opts.ctl file with following settings
-    
+     
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
@@ -360,7 +360,7 @@ This round is as the same as the 2nd round which is using all the evidence from 
 ### Maker 3rd run
 
 1.  Edit maker_opts.ctl file with following settings
-    
+     
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
