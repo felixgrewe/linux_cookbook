@@ -60,7 +60,7 @@ Repeat annotation using RepeatModeler
 
  1.  Edit maker_opts.ctl file with following settings
     #-----Genome (these are always required)
-    genome=../pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
+    genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
     
     #-----Re-annotation Using MAKER Derived GFF3
@@ -216,8 +216,8 @@ This is using the result from the first round of maker to tranning the SANP and 
 1.  Edit maker_opts.ctl file with following settings
     
 	
-	#-----Genome (these are always required)
-    genome=pelargonium_citronellum.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
+    #-----Genome (these are always required)
+    genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
     
     #-----Re-annotation Using MAKER Derived GFF3
@@ -362,8 +362,8 @@ This round is as the same as the 2nd round which is using all the evidence from 
 1.  Edit maker_opts.ctl file with following settings
     
 	
-	#-----Genome (these are always required)
-    genome=pelargonium_citronellum.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
+    #-----Genome (these are always required)
+    genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
     
     #-----Re-annotation Using MAKER Derived GFF3
