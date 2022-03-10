@@ -148,7 +148,7 @@ Repeat annotation using RepeatModeler
     augustus=/home/FM/xxx/opt/Augustus/bin/augustus
 	
 3. Run maker `~/opt/maker/bin/maker` （optional with multiple cores: mpiexec -n 12 maker -base pedicularis_rnd1 round1_maker_opts.ctl maker_bopts.ctl maker_exe.ctl）
-
+   
     bash ./round1_run_maker.sh 2>&1 | tee round1_run_maker.log
 
 ### Extract the output from the maker result
@@ -215,7 +215,6 @@ This is using the result from the first round of maker to tranning the SANP and 
 
 1.  Edit maker_opts.ctl file with following settings
     
-	
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
@@ -299,7 +298,7 @@ This is using the result from the first round of maker to tranning the SANP and 
 ### Run Maker 3rd run with retrained SNAP and Augustus using the same procedure
 
 ### Extract the output from the maker round2 result
-
+    
     cd pedicularis_sorted.maker.output
     ~/opt/maker/bin/gff3_merge -s -d pedicularis_sorted_master_datastore_index.log > pedicularis_rnd2.all.maker.gff
     ~/opt/maker/bin/fasta_merge -d pedicularis_sorted_master_datastore_index.log
@@ -307,7 +306,7 @@ This is using the result from the first round of maker to tranning the SANP and 
     ~/opt/maker/bin/gff3_merge -n -s -d pedicularis_sorted_master_datastore_index.log > pedicularis_rnd2.all.maker.noseq.gff
 
 ### Extract the transcript, protein ,and repeat from the second round maker result
-
+    
     cd pedicularis_sorted.maker.output_rnd2
     # transcript
     awk '{ if ($2 == "est2genome") print $0 }' pedicularis_rnd2.all.maker.noseq.gff > pedicularis_rnd2.all.maker.est2genome.gff
@@ -321,7 +320,7 @@ This is using the result from the first round of maker to tranning the SANP and 
 This round is as the same as the 2nd round which is using all the evidence from the 2nd round for the third time maker annotation
 
 ### Training SNAP
-
+    
     mkdir snap/round2
     cd snap/round2
     ~/opt/maker/bin/maker2zff -x 0.25 -l 50 -d /home/FM/ysun/projects/Pedicularis/maker/116.BFcav1_FLleaf/pedicularis_sorted.maker.output/pedicularis_sorted_master_datastore_index.log
@@ -338,7 +337,7 @@ This round is as the same as the 2nd round which is using all the evidence from 
 
 ### Training Augustus with BUSCO
 “Using the BUSCO v5.3.0 for the trainning”
-
+    
     cd pedicularis_sorted.maker.output
 	~/opt/maker/bin/gff3_merge -s -d pedicularis_sorted_master_datastore_index.log > pedicularis_rnd1.all.maker.gff
 	~/opt/maker/bin/fasta_merge -d pedicularis_sorted_master_datastore_index.log
@@ -361,7 +360,6 @@ This round is as the same as the 2nd round which is using all the evidence from 
 
 1.  Edit maker_opts.ctl file with following settings
     
-	
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
@@ -447,15 +445,15 @@ This round is as the same as the 2nd round which is using all the evidence from 
 After iteratively Running maker, we needs to see the improvment from each step and do the quality control for comparing all the output
 
 1. Count the number of gene models and the gene lengths after each round
-
+    
     cat <roundN.full.gff> | awk '{ if ($3 == "gene") print $0 }' | awk '{ sum += ($5 - $4) } END { print NR, sum / NR }'
 	
 2. Check for the Annotation Edit Distance (AED) distribution (95% or more of the gene models will have an AED of 0.5 or lower in the case of good assemblies) [using script from https://github.com/mscampbell/Genome_annotation/blob/master/AED_cdf_generator.pl]
-
+    
     perl AED_cdf_generator.pl -b 0.025 <roundN.full.gff>
 	
 3. Check the busco of the genes (change the env to the busco)
-
+    
     BUSCO.py -i <roundN.transcripts.fasta>  -o annotation_eval -l eudicots_odb10 -m transcriptome -c 8 -sp arabidopsis -z --augustus_parameters='--progress=true'
 	
 4. Visualize all the evidence using Apollo for the best way gene prediction quality control (fully manual)
