@@ -56,9 +56,10 @@ Repeat annotation using RepeatModeler
     BuildDatabase -name pelargonium -engine ncbi pelargonium_citronellum.fasta
     RepeatModeler -pa 8 -engine ncbi -database pelargonium 2>&1 | tee repeatmodeler.log
 
-### Run maker
+### Run maker 1st run
 
  1.  Edit maker_opts.ctl file with following settings
+     
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
     organism_type=eukaryotic #eukaryotic or prokaryotic. Default is eukaryotic
