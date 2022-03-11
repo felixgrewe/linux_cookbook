@@ -214,7 +214,7 @@ This is using the result from the first round of maker to tranning the SANP and 
 
 ### Maker 2nd run
 
-1.  Edit maker_opts.ctl file with following settings
+ 1.  Edit maker_opts.ctl file with following settings
      
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -294,7 +294,7 @@ This is using the result from the first round of maker to tranning the SANP and 
     clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
     TMP= #specify a directory other than the system default temporary directory for temporary files
     
-2. run maker
+ 2.  run maker
 
 ### Run Maker 3rd run with retrained SNAP and Augustus using the same procedure
 
@@ -359,7 +359,7 @@ This round is as the same as the 2nd round which is using all the evidence from 
 
 ### Maker 3rd run
 
-1.  Edit maker_opts.ctl file with following settings
+ 1.  Edit maker_opts.ctl file with following settings
      
     #-----Genome (these are always required)
     genome=./pedicularis_sorted.fasta #genome sequence (fasta file or fasta embeded in GFF3 file)
@@ -439,25 +439,25 @@ This round is as the same as the 2nd round which is using all the evidence from 
     clean_up=0 #removes theVoid directory with individual analysis files, 1 = yes, 0 = no
     TMP= #specify a directory other than the system default temporary directory for temporary files
     
-2. run maker
+ 2.  run maker
 
 ## Check the output from each round and quality control for the annotation
 
 After iteratively Running maker, we needs to see the improvment from each step and do the quality control for comparing all the output
 
-1. Count the number of gene models and the gene lengths after each round
+ 1.  Count the number of gene models and the gene lengths after each round
     
     cat <roundN.full.gff> | awk '{ if ($3 == "gene") print $0 }' | awk '{ sum += ($5 - $4) } END { print NR, sum / NR }'
     
-2. Check for the Annotation Edit Distance (AED) distribution (95% or more of the gene models will have an AED of 0.5 or lower in the case of good assemblies) [using script from https://github.com/mscampbell/Genome_annotation/blob/master/AED_cdf_generator.pl]
+ 2.  Check for the Annotation Edit Distance (AED) distribution (95% or more of the gene models will have an AED of 0.5 or lower in the case of good assemblies) [using script from https://github.com/mscampbell/Genome_annotation/blob/master/AED_cdf_generator.pl]
     
     perl AED_cdf_generator.pl -b 0.025 <roundN.full.gff>
     
-3. Check the busco of the genes (change the env to the busco)
+ 3.  Check the busco of the genes (change the env to the busco)
     
     BUSCO.py -i <roundN.transcripts.fasta>  -o annotation_eval -l eudicots_odb10 -m transcriptome -c 8 -sp arabidopsis -z --augustus_parameters='--progress=true'
     
-4. Visualize all the evidence using Apollo for the best way gene prediction quality control (fully manual)
+ 4.  Visualize all the evidence using Apollo for the best way gene prediction quality control (fully manual)
 
 ## Rename the gene tags from defaut assigned by maker 
 
