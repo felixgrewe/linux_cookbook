@@ -23,6 +23,9 @@
 ## Genome Assembly ##
 [Genomes Assembly](assembly.md)
 
+## BUSCO and Phylogeny analysis ##
+[BUSCO and Phulogney pipeline](BUSCO-Supermatrix.md)
+
 ## Genome Annotation ##
 [Install Anaconda and Perl modules](Install_Anaconda_and_Perl_modules.md)  
 [Installation of MAKER](install_maker.md)  
