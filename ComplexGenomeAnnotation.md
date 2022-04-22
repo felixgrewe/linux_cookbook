@@ -255,9 +255,9 @@ This is using the result from the first round of maker to tranning the SANP and 
     fgenesh_par_file= #FGENESH parameter file
     pred_gff= #ab-initio predictions from an external GFF3 file
     model_gff= #annotated gene models from an external GFF3 file (annotation pass-through)
-    run_evm=0 #run EvidenceModeler, 1 = yes, 0 = no
-    est2genome=0 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
-    protein2genome=0 #infer predictions from protein homology, 1 = yes, 0 = no
+    run_evm=1 #run EvidenceModeler, 1 = yes, 0 = no
+    est2genome=1 #infer gene predictions directly from ESTs, 1 = yes, 0 = no
+    protein2genome=1 #infer predictions from protein homology, 1 = yes, 0 = no
     trna=1 #find tRNAs with tRNAscan, 1 = yes, 0 = no
     snoscan_rrna= #rRNA file to have Snoscan find snoRNAs
     snoscan_meth= #-O-methylation site fileto have Snoscan find snoRNAs
