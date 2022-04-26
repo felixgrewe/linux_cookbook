@@ -53,3 +53,11 @@ Reads assembly are using long reads as skeleton and short reads for correction.
     constructgenetrees         #constructing gene trees of every single gene alignment using iqtree
     constructsupermtree        #constructing a tree from the concatenated alignment using iqtree
     constructsuperttree        #constructing a consensus tree based on all constructed genes trees using Astral
+
+## Other BUSCO to Phylogeny method
+
+	BuscoOrthoPhylo		https://github.com/PlantDr430/BuscoOrthoPhylo
+	BUSCOfilter			https://github.com/Rowena-h/BUSCOfilter
+	BUSCO_Phylogenomics	https://github.com/jamiemcg/BUSCO_phylogenomics
+	busco_tree			https://github.com/zengxiaofei/busco-tree
+	busco2phylo-nf		https://github.com/lstevens17/busco2phylo-nf
