@@ -55,6 +55,11 @@ The Orthofinder needs the protein seuqences of all the species you want to compa
 
 The r8s ultrametric trees (sometimes also called “dendrograms”) are a special kind of additive tree in which the tips of the trees are all equidistant from the root of the tree. This kind of tree can be used to depict evolutionary time, expressed either directly as years or indirectly as amount of sequence divergence using a molecular clock.    
 
+### Prepare the calibration species for R8S to use
+
+1. Put two calibration species name in http://timetree.org/
+2. Get the molecular time estimates for the calibration species
+
 ### Prepare the input file for r8s
 
 The input file is from the result of Orthofinder: Species_Tree/SpeciesTree_rooted.txt
