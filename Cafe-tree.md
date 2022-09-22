@@ -139,4 +139,5 @@ Filter the gene families with gene copies in at least two species of the specifi
 
 ### Run the CAFE5
 
-   cafe5 -i filtered.cafe.input.tsv -t r8s_ultrametric.txt -p -k 2 -o test2
+    cafe5 -i filtered.cafe.input.tsv -t r8s_ultrametric.txt -p -k 2 -o test2
+
