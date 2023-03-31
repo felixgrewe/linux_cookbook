@@ -19,7 +19,7 @@ For file transfer you can use WinSCP.
 4. Click **Login**  
 You can transfer files by drag & drop
 
-## Using iOS ##
+## Using MacOS ##
 If you're using a Apple computer, you can use the **Terminal** to access the Linux servers by command line.
 
 1. Open Terminal
@@ -35,6 +35,13 @@ For file transfer from iOS, use e.g. the program **cyberduck**:
 2. Click on **Open Connection**
 3. Switch to **SFTP** protocol, enter the ip address of the server you ant to connect to, and your user name
 4. Click **Connect**
+
+Or you can use a program called **FileZilla**:
+
+1. Download the FileZilla via [link](https://dl1.cdn.filezilla-project.org/client/FileZilla_3.63.2.1_macosx-x86.app.tar.bz2?h=kiLDRwI9S2qSKA1Igtwo2w&x=1680277795)
+2. Open the program without installation
+3. Enter the serber IP, type in your username and password
+4. Use **22** for the port and click Quickconnect
 
 ## Learn more about the use of the Linux command line ##
 See the CBFM class website [here](http://cbfm.github.io/website/)
