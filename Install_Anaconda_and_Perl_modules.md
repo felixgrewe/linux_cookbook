@@ -15,7 +15,7 @@ Anaconda needs Python 3.7 environment
 
 **Running the bash script and follow the instrction:**
 
-    bash ~/Downloads/Anaconda3-2020.02-Linux-x86_64.sh
+    bash ~/Downloads/Anaconda3-2023.03-Linux-x86_64.sh
 
 # Perl modules
 
