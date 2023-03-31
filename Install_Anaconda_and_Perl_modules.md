@@ -9,7 +9,7 @@ Anaconda needs Python 3.7 environment
 ## Download anaconda
 
     cd ~/Downloads
-    wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+    wget https://repo.anaconda.com/archive/Anaconda3-2023.03-Linux-x86_64.sh
 
 ## Running installation script
 
